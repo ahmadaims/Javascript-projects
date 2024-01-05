@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+}
+
+body {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.main {
+    min-height: 100vh;
+    width: 90%;
+    margin: 0px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.container {
+    background-color: rgb(37, 37, 37, 0.4);
+    padding: 50px 10px;
+    flex: 0 0 calc(50% - 40px); /* Using flex-basis instead of width */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+h2,h4{
+    /* font-weight: 700; */
+    color: white;
+    padding: 5px;
+}
+h4{
+    font-size: 20px;
+}
+button{
+    outline: none;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-top: 10px;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input{
+    background: white;
+    padding: 7px 3px;
+    margin: 5px;
+    border-radius: 5px;
+}
+#colorpicker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #colorpicker::-webkit-color-swatch {
+    border-radius: 5px;
+    border: 2px solid white;
+  }
+  #colorpicker::-moz-color-swatch {
+    border-radius: 5px;
+    border: none;
+  }
