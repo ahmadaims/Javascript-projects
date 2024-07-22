@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Age calculator - Ahmadaims</title>
+</head>
+<body>
+
+   <div class="main">
+      <div class="age-container">
+         <input type="date" id="datepicker">
+         <button id="age-calculator-btn" onclick="calculateage()">Calculate</button>
+      </div>
+   </div>
+
+   <script>
+      let userInput=document.getElementById("datepicker");
+      //this line of code is for to disbale futer date selection for users.
+      userInput.max=new Date().toISOString().split("T")[0];
+
+      function calculateage(){
+         let birthDate=new Date(userInput.value);
+         
+         let d1=birthDate.getDate();
+         let m1=birthDate.getMonth();
+         let y1=birthDate.getFullYear();
+
+         let today=new Date();
+
+         let d2=today.getDate();
+         let m2=today.getMonth();
+         let y2=today.getFullYear();
+
+         let d3,m3,y3;
+         
+         y3=y2-y1;
+         console.log(y3);
+         };
+   </script>
+</body>
+</html>
