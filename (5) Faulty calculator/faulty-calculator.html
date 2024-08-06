@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 16px;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  input{
+    margin: 10px;
+    height: 30px;
+    padding: 10px; 
+  }
+</style>
+<body>
+
+  <input type="text" id="number1" placeholder="number1">
+  <input type="text" id="number2" placeholder="number2">
+  <input type="text" id="operator" placeholder="+, -, /, *">
+  <button id="calculate">Calculate</button>
+  <p id="result"></p>
+  
+  
+  <script>
+    document.getElementById("calculate").addEventListener("click",function(){
+      let number1=document.getElementById("number1").value;
+      let number2=document.getElementById("number2").value;
+      let result=document.getElementById("result");
+      parseInt(number1);
+      parseInt(number2);
+      let performOperator=document.getElementById("operator").value;
+      let maxRandomNumber = 20;
+  
+      let randomNumber = Math.floor(Math.random()*maxRandomNumber+1);
+      if (randomNumber <= 10){
+        if (performOperator === "+"){
+          console.log(number1 - number2);
+        }
+        else if (performOperator === "*"){
+          console.log(number1 + number2);
+        }
+        else if (performOperator === "-"){
+          console.log(number1 / number2);
+        }
+        else if (performOperator === "/"){
+          console.log(number1 ** number2);
+        }
+        else{
+          alert("Mention the operator from the following");
+        }
+        console.log("Generated random number is " + randomNumber);
+      }
+      else if (randomNumber > 10 || randomNumber <= 20){
+        if (performOperator === "+"){
+          console.log(number1 + number2);
+        }
+        else if (performOperator === "*"){
+          console.log(number1 * number2);
+        }
+        else if (performOperator === "-"){
+          console.log(number1 - number2);
+        }
+        else if (performOperator === "/"){
+          console.log(number1 / number2);
+        }
+        else{
+          alert("Mention the operator from the following");
+        }
+        console.log("Generated random number is " + randomNumber);
+      }
+      else{
+        alert("Values cannot be empty");
+      }
+    })
+
+  </script>
+</body>
+</html>
